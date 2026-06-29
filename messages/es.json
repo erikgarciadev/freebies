@@ -1,0 +1,31 @@
+{
+  "freebies": {
+    "hero": {
+      "title": "Inspiración y recursos en un solo lugar",
+      "description": "Descubre una cuidada selección de herramientas y freebies para creadores. Explora opciones gratuitas y premium, con enlaces directos a sus fuentes originales."
+    },
+    "card": {
+      "view": "Ver Recurso",
+      "by": "De",
+      "tags": {
+        "free": "Gratis",
+        "premium": "Premium",
+        "photocards": "Photocards",
+        "stickers": "Stickers",
+        "wallpapers": "Wallpapers",
+        "printable": "Imprimibles",
+        "digital": "Solo Digital",
+        "all_members": "OT7",
+        "peru": "Perú",
+        "mexico": "México",
+        "colombia": "Colombia",
+        "chile": "Chile",
+        "argentina": "Argentina",
+        "ecuador": "Ecuador",
+        "spain": "España",
+        "tutorial": "Tutorial",
+        "other": "Otros"
+      }
+    }
+  }
+}

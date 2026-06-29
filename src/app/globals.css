@@ -2,20 +2,86 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
+  --primary: oklch(0.64 0.25 21.49);
+  --secondary: #f3f4f6;
+  --accent: #7c3aed;
+
+
+  --secondary-foreground: #27272a;
+
+  --muted: #f8fafc;
+  --muted-foreground: #71717a;
+
+  --border: #e4e4e7;  
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+
+  /* BTS-inspired accent */ 
+  --accent-foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-host-grotesk);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-bts-purple: #770077;
+  --color-bts-c1: #A020F0; /* V */
+  --color-bts-c2: #FFD700; /* J-Hope */
+  --color-bts-c3: #FF69B4; /* Jin */
+  --color-bts-c4: #00BFFF; /* Jimin */
+  --color-bts-c5: #000000; /* Suga */
+  --color-bts-c6: #F5F5F5; /* RM (Blanco/Gris) */
+  --color-bts-c7: #8B0000; /* Jungkook */
+
+  /* Animación de los 7 colores */
+  --animate-color-shift: colorShift 0.3s linear infinite;
+  
+  /* Animación de pulso final suave */
+  --animate-final-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  /* Definición de los Keyframes */
+  @keyframes colorShift {
+    0% { background-color: var(--color-bts-c1); }
+    14% { background-color: var(--color-bts-c2); }
+    28% { background-color: var(--color-bts-c3); }
+    42% { background-color: var(--color-bts-c4); }
+    57% { background-color: var(--color-bts-c5); }
+    71% { background-color: var(--color-bts-c6); }
+    85% { background-color: var(--color-bts-c7); }
+    100% { background-color: var(--color-bts-purple); }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #09090b;
+    --foreground: #fafafa;
+    --primary: oklch(0.64 0.25 21.49);
+    --secondary: #27272a;
+    --accent: #8b5cf6;
+    --secondary-foreground: #fafafa;
+
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
+
+    --border: #27272a;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --accent-foreground: #ffffff;
   }
 }
 
@@ -23,4 +89,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-family: "Host Grotesk", sans-serif;
 }

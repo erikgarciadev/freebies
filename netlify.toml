@@ -1,0 +1,7 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "out"
+
+[build.environment]
+  NPM_FLAGS = "--legacy-peer-deps"
+  SECRETS_SCAN_OMIT_KEYS = "FIREBASE_API_KEY,FIREBASE_AUTH_DOMAIN,FIREBASE_PROJECT_ID"
