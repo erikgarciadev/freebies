@@ -1,7 +1,10 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
+  # Usamos pnpm para instalar y construir
+  command = "pnpm install && pnpm run build"
   publish = "out"
 
 [build.environment]
-  NPM_FLAGS = "--legacy-peer-deps"
+  # Eliminamos NPM_FLAGS porque pnpm no las usa
+  # Activamos Corepack por si la plataforma no detecta pnpm automáticamente
+  NETLIFY_USE_COREPACK = "true"
   SECRETS_SCAN_OMIT_KEYS = "FIREBASE_API_KEY,FIREBASE_AUTH_DOMAIN,FIREBASE_PROJECT_ID"
